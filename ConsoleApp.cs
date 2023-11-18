@@ -8,7 +8,7 @@
 
     internal class GetDataAzure
     {
-        static string azure_path = ConfigurationManager.AppSettings["azure_path"];
+        static string azure_path = ConfigurationManager.AppSettings["azure_link"];
         static string azure_database = ConfigurationManager.AppSettings["azure_database"];
         static string azure_login = ConfigurationManager.AppSettings["azure_login"];
         static string azure_password = ConfigurationManager.AppSettings["azure_password"];
