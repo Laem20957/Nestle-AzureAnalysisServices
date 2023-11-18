@@ -21,7 +21,7 @@
         // Execute script DAX
         public static void OlapDaxDataset()
         {
-            // To set any script DAX
+            // To set any script of DAX
             var query = $@"EVALUATE 'Calendar'";
             var dataset = ExecuteDaxQuery(query);
 
