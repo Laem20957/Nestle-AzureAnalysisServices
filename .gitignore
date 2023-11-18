@@ -364,3 +364,4 @@ FodyWeavers.xsd
 
 # Add current file
 App.config/
+/App.config
