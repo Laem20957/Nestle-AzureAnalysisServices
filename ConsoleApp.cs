@@ -18,18 +18,14 @@
             GetDaxDataset();
         }
 
-        // Execute script DAX
         public static void GetDaxDataset()
         {
-            // To set any script of DAX
             var query = $@"EVALUATE 'Calendar'";
             var dataset = ExecuteDaxQuery(query);
 
-            // Output columns into JSON
             var columns = JsonConvert.SerializeObject(dataset.Columns);
             Console.WriteLine(columns);
 
-            // Output rows into JSON
             foreach (DataRow row in dataset.Rows)
             {
                 var rows = JsonConvert.SerializeObject(row.ItemArray);
@@ -37,7 +33,6 @@
             }
         }
 
-        // Connect to azure analysis services
         public static DataTable ExecuteDaxQuery(string query)
         {
             var connection_string = $@"Provider=MSOLAP.8;Data Source={azure_link};Initial Catalog={azure_database};User ID={azure_login};Password={azure_password};" +
